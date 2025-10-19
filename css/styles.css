@@ -1,0 +1,545 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header 样式 */
+header {
+    background: linear-gradient(135deg, #1246FF 0%, #0066cc 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.header-content p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation 样式 */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-content a:hover {
+    color: #1246FF;
+    border-bottom-color: #1246FF;
+}
+
+/* Search Section 样式 */
+.search-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 30px 0;
+}
+
+.search-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #1246FF;
+}
+
+.search-bar button {
+    background: #1246FF;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #0033aa;
+}
+
+.filter-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-options select {
+    padding: 12px 15px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Latest Updates 样式 */
+.latest-updates {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.latest-updates h2 {
+    color: #1246FF;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.update-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.update-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.update-date {
+    color: #666;
+    margin: 5px 0;
+}
+
+.update-badges {
+    margin: 10px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.badge.stable {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.beta {
+    background: #fff8e1;
+    color: #f57f17;
+}
+
+.badge.preview {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.badge.important {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.update-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.download-btn, .details-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.download-btn {
+    background: #1246FF;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background: #0033aa;
+}
+
+.details-btn {
+    background: #f5f7fa;
+    color: #333;
+}
+
+.details-btn:hover {
+    background: #e1e5eb;
+}
+
+.update-details {
+    background: #f8f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: none;
+}
+
+.update-details h4 {
+    margin-top: 0;
+    color: #1246FF;
+}
+
+.update-details ul {
+    padding-left: 20px;
+}
+
+.update-details li {
+    margin-bottom: 8px;
+}
+
+/* Firmware List 样式 */
+.firmware-list {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.firmware-list h2 {
+    color: #1246FF;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.firmware-list table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.firmware-list th {
+    background-color: #f8f9fc;
+    padding: 16px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e1e5eb;
+}
+
+.firmware-list td {
+    padding: 16px 15px;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.firmware-list tr:hover {
+    background-color: #f8f9fc;
+}
+
+.loading-message, .no-firmware-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.loading-message p, .no-firmware-message p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Device Categories 样式 */
+.device-categories {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.device-categories h2 {
+    color: #1246FF;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.category-card {
+    border: 1px solid #e1e5eb;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+    margin: 0 0 15px 0;
+    color: #1246FF;
+}
+
+.category-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background: #1246FF;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.category-btn:hover {
+    background: #0033aa;
+}
+
+/* Modal 样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modalopen 0.4s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-60px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.stats-container {
+    margin-top: 20px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #1246FF;
+}
+
+/* Footer 样式 */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-content {
+        flex-wrap: wrap;
+    }
+    
+    .nav-content a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-bar button {
+        width: 100%;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .filter-options select {
+        width: 100%;
+    }
+    
+    .update-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .update-actions {
+        width: 100%;
+        margin-top: 20px;
+        justify-content: stretch;
+    }
+    
+    .update-actions button {
+        flex: 1;
+    }
+    
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .firmware-list, .latest-updates, .device-categories {
+        padding: 20px;
+    }
+    
+    .firmware-list th, .firmware-list td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.7rem;
+    }
+    
+    .header-content p {
+        font-size: 1rem;
+    }
+    
+    .search-section, .firmware-list, .latest-updates, .device-categories {
+        padding: 15px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 20% auto;
+    }
+}
