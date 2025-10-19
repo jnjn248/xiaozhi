@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小智固件下载中心</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>小智固件下载中心</h1>
+        </div>
+    </header>
+    
+    
+    <main class="container">
+        <!-- 搜索和筛选部分 -->
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="搜索固件...">
+                <button id="searchButton">搜索</button>
+            </div>
+            <div class="filter-options">
+                <select id="deviceFilter">
+                    <option value="all">所有设备</option>
+                    <option value="device1">小智盒子0.96寸OLED</option>
+                    <option value="device2">小智盒子1.69寸竖屏</option>
+                    <option value="device3">小智盒子1.69寸竖屏</option>
+                </select>
+                <select id="versionFilter">
+                    <option value="all">所有版本</option>
+                    <option value="stable">稳定版</option>
+                    <option value="beta">测试版</option>
+                    <option value="preview">预览版</option>
+                </select>
+            </div>
+        </section>
+               
+        <!-- 固件列表部分 -->
+        <section id="firmware-list" class="firmware-list">
+            <h2>固件列表</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>固件名称</th>
+                            <th>设备型号</th>
+                            <th>版本号</th>
+                            <th>发布日期</th>
+                            <th>文件大小</th>
+                            <th>版本类型</th>
+                            <th>下载</th>
+                        </tr>
+                    </thead>
+                    <tbody id="firmwareTableBody">
+                        <!-- 实时数据将通过JavaScript动态加载 -->
+                    </tbody>
+                </table>
+                <div id="loadingMessage" class="loading-message">
+                    <p>正在加载固件列表...</p>
+                </div>
+                <div id="noFirmwareMessage" class="no-firmware-message" style="display: none;">
+                    <p>暂无固件文件，请将固件文件放入 images 文件夹。</p>
+                </div>
+            </div>
+        </section>
+            
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 小智盒子固件下载中心 版权所有</p>
+        </div>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
