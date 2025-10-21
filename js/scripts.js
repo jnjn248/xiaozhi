@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return [
             {
                 name: 'xiaozhi.bin',
-                device: '小智控制器',
+                device: '小智1.69寸LCD横屏版',
                 version: 'v1.0.0',
-                date: '2023-10-15', // 真实文件日期
-                size: '1.2 MB', // 真实文件大小
+                date: '2025-10-10', // 真实文件日期
+                size: '2.54 MB', // 真实文件大小
                 type: 'stable',
                 path: 'images/xiaozhi.bin'
             }
@@ -160,15 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 分类按钮点击事件
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    categoryButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            console.log('查看分类:', category);
-            // 这里可以添加分类筛选逻辑
-        });
-    });
     
     // 模态框功能
     const modal = document.getElementById('downloadStatsModal');
