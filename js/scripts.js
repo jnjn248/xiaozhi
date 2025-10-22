@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 device: '小智盒子0.96寸OLED版',
                 version: 'v1.0.0',
                 date: '2025-10-22',
-                size: '2.1 MB',
+                size: '9.51 MB',
                 type: 'stable',
                 path: 'images/xiaozhibox-096oled.bin'
             },
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 device: '小智盒子1.69寸LCD版',
                 version: 'v1.0.0',
                 date: '2025-10-22',
-                size: '2.5 MB',
+                size: '9.51 MB',
                 type: 'stable',
                 path: 'images/xiaozhibox-169lcd.bin'
             },
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 device: '小智盒子1.69寸LCD微信风格版',
                 version: 'v1.0.0',
                 date: '2025-10-22',
-                size: '2.6 MB',
+                size: '9.51 MB',
                 type: 'stable',
                 path: 'images/xiaozhibox-169lcd-wechat_style.bin'
             },
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 device: '小智盒子摄像头1.54寸LCD版',
                 version: 'v1.0.0',
                 date: '2025-10-22',
-                size: '3.2 MB',
+                size: '9.51 MB',
                 type: 'stable',
                 path: 'images/xiaozhibox-cam-154lcd.bin'
             }
