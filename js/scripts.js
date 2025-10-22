@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('searchButton');
     const deviceFilter = document.getElementById('deviceFilter');
     const versionFilter = document.getElementById('versionFilter');
+    const typeFilter = document.getElementById('typeFilter');
     
     // 页面加载时获取固件列表
     loadFirmwareList();
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 筛选功能
     deviceFilter.addEventListener('change', filterFirmwareList);
     versionFilter.addEventListener('change', filterFirmwareList);
+    typeFilter.addEventListener('change', filterFirmwareList);
     
     // 加载固件列表
     function loadFirmwareList() {
@@ -53,23 +55,64 @@ document.addEventListener('DOMContentLoaded', function() {
         // 人工维护的固件列表，包含真实文件信息
         return [
             {
-                name: 'xiaozhi.bin',
-                device: '小智1.69寸LCD横屏版',
+                name: 'xiaozhibox-096oled.bin',
+                device: '小智盒子0.96寸OLED版',
                 version: 'v1.0.0',
-                date: '2025-10-10', // 真实文件日期
-                size: '2.54 MB', // 真实文件大小
+                date: '2025-10-22',
+                size: '2.1 MB',
                 type: 'stable',
-                path: 'images/xiaozhi.bin',
-
-                name: 'xiaozhi.bin',
-                device: '小智1.69寸LCD横屏版',
+                path: 'images/xiaozhibox-096oled.bin'
+            },
+            {
+                name: 'xiaozhibox-169lcd.bin',
+                device: '小智盒子1.69寸LCD版',
                 version: 'v1.0.0',
-                date: '2025-10-10', // 真实文件日期
-                size: '2.54 MB', // 真实文件大小
+                date: '2025-10-22',
+                size: '2.5 MB',
                 type: 'stable',
-                path: 'images/xiaozhi.bin'
+                path: 'images/xiaozhibox-169lcd.bin'
+            },
+            {
+                name: 'xiaozhibox-169lcd-wechat_style.bin',
+                device: '小智盒子1.69寸LCD微信风格版',
+                version: 'v1.0.0',
+                date: '2025-10-22',
+                size: '2.6 MB',
+                type: 'stable',
+                path: 'images/xiaozhibox-169lcd-wechat_style.bin'
+            },
+            {
+                name: 'xiaozhibox-cam-154lcd.bin',
+                device: '小智盒子摄像头1.54寸LCD版',
+                version: 'v1.0.0',
+                date: '2025-10-22',
+                size: '3.2 MB',
+                type: 'stable',
+                path: 'images/xiaozhibox-cam-154lcd.bin'
             }
             // 当添加新固件时，在此处添加新的对象
         ];
     }
-}
+    
+    // 显示固件列表
+    function displayFirmwareList(firmwareFiles) {
+        firmwareTableBody.innerHTML = '';
+        
+        firmwareFiles.forEach(firmware => {
+            const row = document.createElement('tr');
+            const typeClass = firmware.type === 'stable' ? 'stable' : 'beta';
+            const typeText = firmware.type === 'stable' ? '稳定版' : '测试版';
+            
+            row.innerHTML = `
+                <td><span class="filename">${firmware.name}</span></td>
+                <td>${firmware.device}</td>
+                <td><span class="version-tag">${firmware.version}</span></td>
+                <td>${firmware.date}</td>
+                <td>${firmware.size}</td>
+                <td><span class="type-badge ${typeClass}">${typeText}</span></td>
+                <td><a href="${firmware.path}" download="${firmware.name}" class="download-btn">下载</a></td>
+            `;
+            firmwareTableBody.appendChild(row);
+        });
+    }
+});

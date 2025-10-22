@@ -16,6 +16,7 @@
 
         <!-- Firmware List -->
         <section class="firmware-list" id="firmware">
+            <div class="container">
                 <h2>固件列表</h2>
                 <div class="table-responsive">
                     <table>
@@ -33,28 +34,25 @@
                         <tbody id="firmwareTableBody">
                             <!-- 固件数据将通过JavaScript动态加载 -->
                             <tr id="loadingMessage">
-                                <td colspan="6">
+                                <td colspan="7">
                                     <div class="loading-message">
+                                        <div class="loading-spinner"></div>
                                         <p>正在加载固件列表...</p>
                                     </div>
                                 </td>
                             </tr>
                             <tr id="noFirmwareMessage" style="display: none;">
-                                    <td colspan="6">
-                                        <div class="no-firmware-message">
-                                            <p>暂无固件文件</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                </section>
+                                <td colspan="7">
+                                    <div class="no-firmware-message">
+                                        <p>暂无固件文件</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-</div>
-</div>
+        </section>
 <script src="js/scripts.js"></script>
 </body>
 </html>
